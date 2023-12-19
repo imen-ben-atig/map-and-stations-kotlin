@@ -1,0 +1,55 @@
+<!-- activity_transport_selection.xml -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <TextView
+        android:id="@+id/textViewTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Select Transport"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="16dp"/>
+
+    <RadioGroup
+        android:id="@+id/radioGroup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/radioButtonBus"
+            android:layout_width="92dp"
+            android:layout_height="wrap_content"
+            android:text="Bus" />
+
+        <RadioButton
+            android:id="@+id/radioButtonCollectiveTaxi"
+            android:layout_width="146dp"
+            android:layout_height="wrap_content"
+            android:text="Collective Taxi" />
+
+        <RadioButton
+            android:id="@+id/radioButtonRegularTaxi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Regular Taxi"/>
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/buttonSelectTransport"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Select Transport"
+        android:value="Select Transport"
+
+        android:layout_marginTop="16dp"
+        android:background="@color/green"
+        android:textColor="#fff"/>
+</LinearLayout>
