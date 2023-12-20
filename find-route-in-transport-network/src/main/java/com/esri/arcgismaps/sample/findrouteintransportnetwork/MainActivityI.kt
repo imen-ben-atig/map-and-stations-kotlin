@@ -69,34 +69,7 @@ import java.io.File
 import kotlin.math.roundToInt
 
 
-class TransportSelectionActivity : AppCompatActivity() {
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_transport_selection)
 
-        val buttonSelectTransport: Button = findViewById(R.id.buttonSelectTransport)
-        val radioGroup: RadioGroup = findViewById(R.id.radioGroup)
-
-        buttonSelectTransport.setOnClickListener {
-            val selectedTransport = when (radioGroup.checkedRadioButtonId) {
-                R.id.radioButtonBus -> "Bus"
-                R.id.radioButtonCollectiveTaxi -> "Collective Taxi"
-                R.id.radioButtonRegularTaxi -> "Regular Taxi"
-                else -> "Unknown"
-            }
-            //////
-            ////
-            ////
-
-
-            if (selectedTransport != "Unknown") {
-                val intent = Intent(this, DownloadActivity::class.java)
-                intent.putExtra("selectedTransport", selectedTransport)
-                startActivity(intent)
-            }
-        }
-    }
-}
 class MainActivityI : AppCompatActivity() {
     private val apiService = RetrofitInstance.retrofit.create(ApiService::class.java)
     private val points : ArrayList<Point> = ArrayList();
